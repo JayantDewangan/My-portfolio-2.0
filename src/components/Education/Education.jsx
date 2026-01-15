@@ -34,7 +34,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient scroll-mt-28 -mt-15"
+      className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient scroll-mt-28 -mt-20"
     >
       {/* Section Title */}
       <div className="text-center mb-20">
