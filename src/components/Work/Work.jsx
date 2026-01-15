@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { projects } from "../../constants";
+import { LuGithub } from "react-icons/lu";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Work = () => {
 
@@ -54,7 +56,7 @@ const Work = () => {
                 </div>
               </div>
             ))
-          }          
+          }       
         </div>
 
         {/* Model Container :  */}
@@ -96,6 +98,13 @@ const Work = () => {
             </div>
           )
         }
+
+        <div className="flex justify-center mt-23">
+          <a href="https://github.com/JayantDewangan?tab=repositories" target="_blank" className="text-white cursor-pointer px-5 py-5 bg-purple-700 rounded-full flex justify-center items-center gap-3 hover:bg-purple-800 transition-transform hover:-translate-y-0.5">
+            <span className="text-xl"><LuGithub /></span> <span className="font-medium">View More on GitHub</span> <span><FaArrowRightLong /></span>
+          </a>
+        </div>
+        
       </section>
     </>
   );
