@@ -1,18 +1,25 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
+import AboutMe from "./components/AboutMe/AboutMe";
 import Skills from "./components/Skills/Skills";
 import Work from "./components/Work/Work";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contacts";
 import Footer from "./components/Footer/Footer";
 import BlurBlob from "./BlurBlob";
+import GithubStats from "./components/GithubStats/GithubStats";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import { ThemeProvider } from "./context/ThemeContext";
+import CatchTheBugs from "./components/Game/CatchTheBugs";
 
 function App() {
-  return (
-    <>
-      <div className="bg-[#050414]">
+  const [isBugGamePlaying, setIsBugGamePlaying] = React.useState(false);
 
+  return (
+    <ThemeProvider>
+      <div className="bg-gray-50 dark:bg-[#050414] min-h-screen text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        
         <BlurBlob position={{top: '35%', left: '20%'}} size={{width: '30%', height: '40%'}}/>
 
         <div
@@ -20,16 +27,25 @@ function App() {
         ></div>
 
         <div className="relative pt-20">
-          <Navbar />
+          <Navbar onStartBugGame={() => setIsBugGamePlaying(true)} />
           <About />
+          <AboutMe />
           <Skills />
           <Work />
+          <GithubStats />
           <Education />
           <Contact />
           <Footer />
+          <ScrollToTop />
         </div>
+
+        {/* Global Bug Game Overlay */}
+        <CatchTheBugs 
+          isPlaying={isBugGamePlaying} 
+          onGameOver={() => setIsBugGamePlaying(false)} 
+        />
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 

@@ -12,9 +12,9 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="text-white py-8 -mt-7 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+      <footer className="py-8 -mt-7 px-[12vw] md:px-[7vw] lg:px-[20vw] border-t border-gray-200 dark:border-gray-800">
         <div className="container mx-auto text-center">
-          <h2 className="text-xl font-semibold text-purple-500">
+          <h2 className="text-xl font-semibold text-purple-600 dark:text-purple-500">
             Jayant Dewangan
           </h2>
 
@@ -24,7 +24,7 @@ const Footer = () => {
               <button
                 key={index}
                 onClick={() => handleScroll(item.id)}
-                className="hover:text-purple-500 text-sm sm:text-base my-1 cursor-pointer"
+                className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-500 text-sm sm:text-base my-1 cursor-pointer transition-colors"
               >
                 {item.label}
               </button>
@@ -35,7 +35,7 @@ const Footer = () => {
               href="https://github.com/codingmastr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-purple-500"
+              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-500 transition-colors"
             >
               <FaGithub size={24} />
             </a>
@@ -43,7 +43,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/tarun-kaushik-553b441a4"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-purple-500"
+              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-500 transition-colors"
             >
               <FaLinkedin size={24} />
             </a>
@@ -51,12 +51,12 @@ const Footer = () => {
               href="https://www.instagram.com/jayant.031/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-purple-500"
+              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-500 transition-colors"
             >
               <FaInstagram size={24} />
             </a>
           </div>
-          <p className="text-gray-500 text-sm font-semibold mt-6">
+          <p className="text-gray-500 dark:text-gray-600 text-sm font-semibold mt-6 flex justify-center items-center">
             © {new Date().getFullYear()} Jayant Dewangan. All rights reserved.
           </p>
         </div>

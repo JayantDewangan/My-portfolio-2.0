@@ -14,16 +14,16 @@ const About = () => {
           {/* Left side */}
           <div className="md:w-150 text-center md:text-left mt-8 md:mt-0">
             {/* Greeting  : */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-2 leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
               Hi, I am
             </h1>
             {/* Name : */}
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
               Jayant Dewangan
             </h2>
             {/* Skills heading with typing effect : */}
             <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-              <span className="text-white">I am a </span>
+              <span className="text-gray-800 dark:text-white">I am a </span>
               <Typewriter
                 words={[
                   "Computer Science Engineer",
@@ -40,7 +40,7 @@ const About = () => {
               />
             </h3>
             {/* About me paragraph : */}
-            <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-lg text-gray-600 dark:text-gray-400 mb-10 mt-8 leading-relaxed">
               I am a full-stack developer driven by a passion for building
               scalable web applications. Skilled in both front-end and back-end
               development, I specialize in the MERN stack and other modern

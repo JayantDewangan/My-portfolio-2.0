@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const Contacts = () => {
   const form = useRef();
@@ -47,17 +48,29 @@ const Contacts = () => {
         <ToastContainer />
 
         {/* Title */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">CONTACT</h2>
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-14"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">CONTACT</h2>
           <div className="w-32 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-          <p className="text-gray-400 mt-4 text-lg font-semibold">
+          <p className="text-gray-600 dark:text-gray-400 mt-4 text-lg font-semibold">
             I’d love to hear from you—reach out for any opportunities or questions!
           </p>
-        </div>
+        </motion.div>
 
         {/* Form */}
-        <div className="w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
-          <h3 className="text-xl font-semibold text-white text-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="w-full max-w-md bg-white dark:bg-[#0d081f] p-6 rounded-lg shadow-xl dark:shadow-none border border-gray-200 dark:border-gray-700"
+        >
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white text-center">
             Connect With Me 🚀
           </h3>
 
@@ -71,7 +84,7 @@ const Contacts = () => {
               name="user_email"
               placeholder="Your Email"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 transition"
+              className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#131025] text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-500 dark:focus:border-purple-500 transition"
             />
 
             <input
@@ -79,7 +92,7 @@ const Contacts = () => {
               name="user_name"
               placeholder="Your Name"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 transition"
+              className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#131025] text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-500 dark:focus:border-purple-500 transition"
             />
 
             <input
@@ -87,7 +100,7 @@ const Contacts = () => {
               name="user_subject"
               placeholder="Subject"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 transition"
+              className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#131025] text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-500 dark:focus:border-purple-500 transition"
             />
 
             <textarea
@@ -95,7 +108,7 @@ const Contacts = () => {
               placeholder="Message"
               rows="4"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 transition resize-none"
+              className="w-full p-3 rounded-md bg-gray-50 dark:bg-[#131025] text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-500 dark:focus:border-purple-500 transition resize-none"
             />
 
             <button
@@ -109,7 +122,7 @@ const Contacts = () => {
               {loading ? "SENDING..." : "SEND"}
             </button>
           </form>
-        </div>
+        </motion.div>
       </section>
     </>
   );

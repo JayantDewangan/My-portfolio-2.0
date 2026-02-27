@@ -1,12 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
 
-html{
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #8245ec #f3f4f6;
 }
 
-@layer utilities{
-    .clip-path-custom{
+.dark html {
+    scrollbar-color: #8245ec #050414;
+}
+
+/* Global Scrollbar */
+::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #f3f4f6 !important;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #050414 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8245ec !important;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a855f7 !important;
+}
+
+@layer utilities {
+    .clip-path-custom {
         clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 0 100%);
     }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Custom Scrollbar for GitHub Stats */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #e5e7eb;
+    border-radius: 4px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+    background: #0f0c29;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #8245ec;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a855f7;
+}
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #8245ec #e5e7eb;
+}
+
+.dark .custom-scrollbar {
+    scrollbar-color: #8245ec #0f0c29;
 }

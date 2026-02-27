@@ -182,3 +182,24 @@ export const SkillsInfo = [
       webapp: "https://jayantdewangan.github.io/Movie-Guide-App/",
     },
   ];  
+
+  export const achievements = [
+    {
+      title: "Smart India Hackathon 2024 Finalist",
+      issuer: "Ministry of Education (MoE), AICTE",
+      description: "Developed a prototype text-to-code solution, placing in the top finalists nationally among thousands of teams.",
+      icon: "🏆"
+    },
+    {
+      title: "LeetCode 500+ Solved",
+      issuer: "LeetCode",
+      description: "Successfully solved over 500 algorithm & data structure problems, consistently ranked in contest ratings.",
+      icon: "💻"
+    },
+    {
+      title: "Google Cloud Ready Facilitator",
+      issuer: "Google Cloud",
+      description: "Completed multiple tracks on Cloud Infrastructure, Data ML, and guided peers in Google Cloud fundamental tools.",
+      icon: "☁️"
+    }
+  ];
