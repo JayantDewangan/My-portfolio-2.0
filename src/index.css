@@ -3,13 +3,17 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-html {
+html,
+body {
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: #8245ec #f3f4f6;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
-.dark html {
+.dark html,
+.dark body {
     scrollbar-color: #8245ec #050414;
 }
 
